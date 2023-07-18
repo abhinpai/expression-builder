@@ -1,0 +1,12 @@
+.container {
+  transform: translate(-50%, -50%);
+  @apply h-[90%] w-3/4 bg-[var(--white-bg-color)] p-4 rounded-md shadow absolute top-1/2 left-1/2;
+
+  .title {
+    @apply text-3xl;
+  }
+
+  .divider {
+    @apply border border-[var(--gray-bg-color)] my-2;
+  }
+}
