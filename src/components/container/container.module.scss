@@ -2,11 +2,22 @@
   transform: translate(-50%, -50%);
   @apply h-[90%] w-3/4 bg-[var(--white-bg-color)] p-4 rounded-md shadow absolute top-1/2 left-1/2;
 
-  .title {
-    @apply text-3xl;
+  .nav {
+    @apply flex gap-4 items-center;
+    .title {
+      @apply text-3xl;
+    }
+
+    .back_nav {
+      @apply w-6 h-6 bg-gray-200 rounded-sm hover:cursor-pointer;
+    }
   }
 
-  .divider {
-    @apply border border-[var(--gray-bg-color)] my-2 mb-4;
+  .language{
+    @apply ml-10;
   }
+}
+
+.divider {
+  @apply border border-[var(--gray-bg-color)] my-2 mb-4;
 }

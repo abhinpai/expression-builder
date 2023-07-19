@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import { Container } from '@component/container'
 
 export const Editor = () => {
-  console.log(useParams())
+  const { languageId } = useParams()
 
   return <Container>Editor</Container>
 }
