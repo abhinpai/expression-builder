@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.ant-input {
+  &::placeholder {
+    @apply font-normal;
+  }
+  @apply rounded-none;
+}
+
+:where(.css-dev-only-do-not-override-1sn0ohr).ant-input-search
+  > .ant-input-group
+  > .ant-input-group-addon:last-child
+  .ant-input-search-button {
+  @apply rounded-none;
+}
+
+.ant-input-search-button {
+  @apply flex justify-center items-center;
+}

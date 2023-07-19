@@ -2,7 +2,7 @@
   @apply grid grid-cols-fluid gap-4;
 
   .language {
-    @apply flex justify-center flex-col rounded-md p-4 h-32 border border-gray-200 hover:cursor-pointer hover:border-blue-400 hover:shadow-blue-400 hover:shadow hover:bg-blue-50;
+    @apply flex justify-center flex-col rounded-md p-4 h-32 border border-gray-200 hover:cursor-pointer hover:border-blue-400 hover:shadow-blue-50 hover:shadow hover:bg-blue-50;
 
     .label {
       @apply text-xl;

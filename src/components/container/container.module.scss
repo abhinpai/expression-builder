@@ -13,11 +13,19 @@
     }
   }
 
-  .language{
+  .language {
     @apply ml-10;
+  }
+
+  .children_full {
+    @apply h-[calc(100%-60px)] max-h-[calc(100%-60px)];
+  }
+
+  .children_partial {
+    @apply h-[calc(100%-84px)] max-h-[calc(100%-84px)];
   }
 }
 
 .divider {
-  @apply border border-[var(--gray-bg-color)] my-2 mb-4;
+  @apply border border-[var(--gray-bg-color)] my-2 mb-2;
 }

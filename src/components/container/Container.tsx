@@ -33,7 +33,15 @@ export const Container: FC<PropsWithChildren> = ({ children }) => {
       ) : undefined}
 
       <div className={styles.divider} />
-      {children}
+      <div
+        className={
+          isEmpty(languageId)
+            ? styles['children_full']
+            : styles['children_partial']
+        }
+      >
+        {children}
+      </div>
     </main>
   )
 }

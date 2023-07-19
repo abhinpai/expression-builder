@@ -1,0 +1,31 @@
+.editor {
+  @apply grid grid-cols-3 h-full;
+
+  .pre_defined_div {
+    @apply h-full border-r-[1px] pr-4 font-bold;
+
+    .contents {
+      @apply h-full overflow-y-auto flex flex-col gap-2 mt-4;
+
+      .content {
+        @apply rounded p-2 border border-gray-200 cursor-pointer font-normal text-sm hover:border-blue-400 hover:shadow-blue-50 hover:shadow hover:bg-blue-50;
+      }
+
+      .selected_content {
+        @apply rounded p-2 border  cursor-pointer font-normal border-blue-400 text-sm shadow-blue-50 shadow bg-blue-50;
+      }
+    }
+
+    .empty_content {
+      @apply h-[calc(100%-32px)] flex justify-center items-center;
+
+      p {
+        @apply text-center text-gray-400 text-xl;
+      }
+    }
+  }
+
+  .editor_div {
+    @apply h-full col-span-2;
+  }
+}

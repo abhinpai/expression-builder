@@ -18,5 +18,25 @@
   {
     "id": "custom-005",
     "label": "Calculate key performance indicators (KPIs)"
+  },
+  {
+    "id": "custom-006",
+    "label": "Calculate median of the series of numbers"
+  },
+  {
+    "id": "custom-007",
+    "label": "Order Fulfillment"
+  },
+  {
+    "id": "custom-008",
+    "label": "Active security camera measure"
+  },
+  {
+    "id": "custom-009",
+    "label": "Measure the warehouse quality control"
+  },
+  {
+    "id": "custom-0010",
+    "label": "Calculate key performance indicators (KPIs)"
   }
 ]
