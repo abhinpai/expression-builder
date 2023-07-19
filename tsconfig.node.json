@@ -1,10 +1,20 @@
 {
   "compilerOptions": {
+    "jsx": "react-jsx",
     "composite": true,
     "skipLibCheck": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@component/*": ["./components/*"],
+      "@views/*": ["./views/*"],
+      "@appTypes/*": ["./types/*"],
+      "@constants/*": ["./constants/*"],
+      "@appRoute/*": ["./routes/*"]
+    },
+    "typeRoots": ["node_modules/@types", "./types"]
   },
-  "include": ["vite.config.ts"]
+  "include": ["vite.config.ts", "src/**/*.ts", "src/**/*.tsx"]
 }
