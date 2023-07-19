@@ -1,13 +1,19 @@
-import React from 'react'
-import Search from 'antd/es/input/Search'
+import React, { useCallback } from 'react'
+import { Input as AntInput } from 'antd'
+import { debounce } from 'lodash'
 
-export const Input = () => {
-  const onSearch = (value: string) => {}
+interface Props {
+  readonly onSearch: (value: string) => void
+}
+
+export const Input = (props: Props) => {
+  const onSearch = (e: any) => {
+    props.onSearch(e.target.value.toLowerCase())
+  }
+
+  const debounceFn = useCallback(debounce(onSearch, 200), [])
 
   return (
-    <Search
-      placeholder='Search predefined formulas'
-      onSearch={onSearch}
-    />
+    <AntInput placeholder='Search predefined formulas' onChange={debounceFn} />
   )
 }

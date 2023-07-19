@@ -14,6 +14,7 @@ export const Editor = () => {
     IPredefinedContent[]
   >([])
   const [selectedContent, setSelectedContent] = useState<IPredefinedContent>()
+  const [searchText, setSearchText] = useState<string>()
 
   useEffect(() => {
     async function getLangData() {
@@ -37,11 +38,15 @@ export const Editor = () => {
     setSelectedContent(content)
   }
 
+  const onSearch = (value: string) => {
+    setSearchText(value)
+  }
+
   return (
     <Container>
       <section className={styles.editor}>
         <div className={styles['pre_defined_div']}>
-          <Input />
+          <Input onSearch={onSearch} />
           <div
             className={
               isEmpty(predefinedContents)
@@ -52,19 +57,25 @@ export const Editor = () => {
             {isEmpty(predefinedContents) ? (
               <p>No pre-defined formula present</p>
             ) : (
-              predefinedContents?.map((content) => (
-                <div
-                  className={
-                    selectedContent?.id === content.id
-                      ? styles['selected_content']
-                      : styles.content
-                  }
-                  key={content.id}
-                  onClick={() => onSelectContent(content)}
-                >
-                  {content.label}
-                </div>
-              ))
+              predefinedContents
+                ?.filter((x) =>
+                  isEmpty(searchText)
+                    ? x
+                    : x.label.toLowerCase().includes(searchText)
+                )
+                .map((content) => (
+                  <div
+                    className={
+                      selectedContent?.id === content.id
+                        ? styles['selected_content']
+                        : styles.content
+                    }
+                    key={content.id}
+                    onClick={() => onSelectContent(content)}
+                  >
+                    {content.label}
+                  </div>
+                ))
             )}
           </div>
         </div>
