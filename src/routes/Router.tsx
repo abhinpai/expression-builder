@@ -1,11 +1,16 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
-import Language from '@views/languages/Language'
+import { Editor, Language, NotFound } from '@views/index'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Language />
+    element: <Language />,
+    errorElement: <NotFound />
+  },
+  {
+    path: '/:languageId',
+    element: <Editor />
   }
 ])
 
