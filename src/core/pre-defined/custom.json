@@ -1,0 +1,22 @@
+[
+  {
+    "id": "custom-001",
+    "label": "Calculate median of the series of numbers"
+  },
+  {
+    "id": "custom-002",
+    "label": "Order Fulfillment"
+  },
+  {
+    "id": "custom-003",
+    "label": "Active security camera measure"
+  },
+  {
+    "id": "custom-004",
+    "label": "Measure the warehouse quality control"
+  },
+  {
+    "id": "custom-005",
+    "label": "Calculate key performance indicators (KPIs)"
+  }
+]

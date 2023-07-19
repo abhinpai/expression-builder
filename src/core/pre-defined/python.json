@@ -1,0 +1,22 @@
+[
+  {
+    "id": "py-001",
+    "label": "Calculate the average uptime of the conveyor belt"
+  },
+  {
+    "id": "py-002",
+    "label": "Calculate the average uptime of the pick-module"
+  },
+  {
+    "id": "py-003",
+    "label": "Incoming totes metrics"
+  },
+  {
+    "id": "py-004",
+    "label": "Outgoing totes metrics"
+  },
+  {
+    "id": "py-005",
+    "label": "SKU KPI measurement"
+  }
+]
