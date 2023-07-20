@@ -1,8 +1,8 @@
-import React, { lazy, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { isEmpty } from 'lodash'
 
-import { Container, Input } from '@component/index'
+import { CmEditor, Container, Input } from '@component/index'
 import { IPredefinedContent } from '@appTypes/index'
 
 import styles from './Editor.module.scss'
@@ -79,7 +79,9 @@ export const Editor = () => {
             )}
           </div>
         </div>
-        <div className={styles['editor_div']}></div>
+        <div className={styles['editor_div']}>
+          <CmEditor content={selectedContent}/>
+        </div>
       </section>
     </Container>
   )

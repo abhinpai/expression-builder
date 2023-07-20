@@ -9,6 +9,7 @@ import { isEmpty } from 'lodash'
 
 import styles from './container.module.scss'
 import { ILanguage } from '@appTypes/ILanguage.interface'
+import { ArrowLeftOutlined, BackwardFilled } from '@ant-design/icons'
 
 export const Container: FC<PropsWithChildren> = ({ children }) => {
   const { languageId } = useParams()
@@ -22,7 +23,7 @@ export const Container: FC<PropsWithChildren> = ({ children }) => {
     <main className={styles.container}>
       <nav className={styles.nav}>
         {!isEmpty(languageId) ? (
-          <div className={styles['back_nav']} onClick={goBack} />
+          <div className={styles['back_nav']} onClick={goBack} ><ArrowLeftOutlined height={1} /></div>
         ) : undefined}
         <div>
           <h1 className={styles.title}>Formula Editor</h1>

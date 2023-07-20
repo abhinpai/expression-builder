@@ -27,5 +27,9 @@
 
   .editor_div {
     @apply h-full col-span-2;
+
+    .code_mirror {
+      @apply h-full;
+    }
   }
 }

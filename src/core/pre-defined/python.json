@@ -1,22 +1,27 @@
 [
   {
     "id": "py-001",
-    "label": "Calculate the average uptime of the conveyor belt"
+    "label": "Calculate the average uptime of the conveyor belt",
+    "snippet": "#Average uptime of the conveyor belt \nimport json\n\n\ndef calculate_average_uptime(uptime_values):\n    total_uptime = sum(uptime_values)\n    num_uptime_values = len(uptime_values)\n\n    if num_uptime_values == 0:\n        return 0.0\n\n    average_uptime = total_uptime / num_uptime_values\n    return average_uptime\n\n\n# Example usage:\nuptime_values = [99.5, 98.2, 99.8, 99.0, 99.4]\naverage_uptime = calculate_average_uptime(uptime_values)\nprint(\"Average Uptime: {:.2f}%\".format(average_uptime))\n"
   },
   {
     "id": "py-002",
-    "label": "Calculate the average uptime of the pick-module"
+    "label": "Calculate the average uptime of the pick-module",
+    "snippet": "#Average uptime of the pick-module \nimport json\n\n\ndef calculate_average_uptime(uptime_values):\n    total_uptime = sum(uptime_values)\n    num_uptime_values = len(uptime_values)\n\n    if num_uptime_values == 0:\n        return 0.0\n\n    average_uptime = total_uptime / num_uptime_values\n    return average_uptime\n\n\n# Example usage:\nuptime_values = [99.5, 98.2, 99.8, 99.0, 99.4]\naverage_uptime = calculate_average_uptime(uptime_values)\nprint(\"Average Uptime: {:.2f}%\".format(average_uptime))\n"
   },
   {
     "id": "py-003",
-    "label": "Incoming totes metrics"
+    "label": "Incoming totes metrics",
+    "snippet": null
   },
   {
     "id": "py-004",
-    "label": "Outgoing totes metrics"
+    "label": "Outgoing totes metrics",
+    "snippet": null
   },
   {
     "id": "py-005",
-    "label": "SKU KPI measurement"
+    "label": "SKU KPI measurement",
+    "snippet": null
   }
 ]

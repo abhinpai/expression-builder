@@ -1,6 +1,7 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 import { Editor, Language, NotFound } from '@views/index'
+import { CmEditor } from '@component/cmEditor'
 
 const router = createBrowserRouter([
   {
@@ -10,7 +11,12 @@ const router = createBrowserRouter([
   },
   {
     path: '/:languageId',
-    element: <Editor />
+    element: <Editor/>
+    // element:  (
+    //   <div>
+    //     <CmEditor />
+    //   </div>
+    // )
   }
 ])
 

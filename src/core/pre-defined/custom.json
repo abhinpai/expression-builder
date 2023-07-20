@@ -1,42 +1,52 @@
 [
   {
     "id": "custom-001",
-    "label": "Calculate median of the series of numbers"
+    "label": "Calculate median of the series of numbers",
+    "snippet": null
   },
   {
     "id": "custom-002",
-    "label": "Order Fulfillment"
+    "label": "Order Fulfillment",
+    "snippet": null
   },
   {
     "id": "custom-003",
-    "label": "Active security camera measure"
+    "label": "Active security camera measure",
+    "snippet": null
   },
   {
     "id": "custom-004",
-    "label": "Measure the warehouse quality control"
+    "label": "Measure the warehouse quality control",
+    "snippet": null
   },
   {
     "id": "custom-005",
-    "label": "Calculate key performance indicators (KPIs)"
+    "label": "Calculate key performance indicators (KPIs)",
+    "snippet": null
   },
   {
     "id": "custom-006",
-    "label": "Calculate median of the series of numbers"
+    "label": "Calculate median of the series of numbers",
+    "snippet": null
   },
   {
     "id": "custom-007",
-    "label": "Order Fulfillment"
+    "label": "Order Fulfillment",
+    "snippet": null
   },
   {
     "id": "custom-008",
-    "label": "Active security camera measure"
+    "label": "Active security camera measure",
+    "snippet": null
   },
   {
     "id": "custom-009",
-    "label": "Measure the warehouse quality control"
+    "label": "Measure the warehouse quality control",
+    "snippet": null
   },
   {
     "id": "custom-0010",
-    "label": "Calculate key performance indicators (KPIs)"
+    "label": "Calculate key performance indicators (KPIs)",
+    "snippet": null
   }
 ]

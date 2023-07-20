@@ -1,6 +1,5 @@
 .container {
-  transform: translate(-50%, -50%);
-  @apply h-[90%] w-3/4 bg-[var(--white-bg-color)] p-4 rounded-md shadow absolute top-1/2 left-1/2;
+  @apply h-full w-full bg-[var(--white-bg-color)] p-4 rounded-md shadow m-auto;
 
   .nav {
     @apply flex gap-4 items-center;
@@ -9,7 +8,7 @@
     }
 
     .back_nav {
-      @apply w-6 h-6 bg-gray-200 rounded-sm hover:cursor-pointer;
+      @apply w-6 h-6 bg-gray-200 rounded-sm hover:cursor-pointer flex justify-center items-center;
     }
   }
 
