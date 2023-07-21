@@ -9,7 +9,10 @@
     }
 
     .description {
-      @apply text-xs mt-4;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      @apply text-xs mt-4 overflow-hidden text-ellipsis;
     }
   }
 }

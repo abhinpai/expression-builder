@@ -7,26 +7,81 @@
   {
     "id": "python",
     "label": "Python",
-    "description": "A popular and modern programming language"
+    "description": "A high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation via the off-side rule."
   },
   {
     "id": "c-sharp",
     "label": "C#",
-    "description": "Most used programming language"
+    "description": "A general-purpose high-level programming language supporting multiple paradigms."
   },
   {
     "id": "scala",
     "label": "Scala",
-    "description": "Some random description"
+    "description": "A strong statically typed high-level general-purpose programming language that supports both object-oriented programming and functional programming"
   },
   {
     "id": "perl",
     "label": "Perl",
-    "description": "Some random description"
+    "description": "A family of two high-level, general-purpose, interpreted, dynamic programming languages."
   },
   {
     "id": "lua",
     "label": "Lua",
-    "description": "Some random description"
+    "description": "A lightweight, high-level, multi-paradigm programming language designed primarily for embedded use in applications."
+  },
+  { 
+    "id": "go",
+    "label": "Go",
+    "description": "A statically typed, compiled high-level programming language designed at Google by Robert Griesemer, Rob Pike, and Ken Thompson."
+  },
+  {
+    "id": "java",
+    "label": "Java",
+    "description": "A high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible."
+  },
+  {
+    "id": "javascript",
+    "label": "Javascript",
+    "description": "A programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS."
+  },
+  {
+    "id": "typescript",
+    "label": "Typescript",
+    "description": "A free and open-source high-level programming language developed by Microsoft that adds static typing with optional type annotations to JavaScript."
+  },
+  {
+    "id": "markdown",
+    "label": "Markdown",
+    "description": "A lightweight markup language for creating formatted text using a plain-text editor."
+  },
+  {
+    "id": "objective-c",
+    "label": "Objective-C",
+    "description": "A high-level general-purpose, object-oriented programming language that adds Smalltalk-style messaging to the C programming language"
+  },
+  {
+    "id": "json",
+    "label": "JSON",
+    "description": "An open standard file format and data interchange format that uses human-readable text to store and transmit data objects consisting of attribute–value pairs and arrays."
+  },
+  {
+    "id": "yaml",
+    "label": "YAML",
+    "description": "A human-readable data-serialization language. It is commonly used for configuration files and in applications where data is being stored or transmitted."
+  },
+  {
+    "id": "vb-net",
+    "label": "VB.NET",
+    "description": "A multi-paradigm, object-oriented programming language, implemented on .NET, Mono, and the .NET Framework."
+  },
+  {
+    "id": "shell",
+    "label": "Shell",
+    "description": "A computer program designed to be run by a Unix shell, a command-line interpreter. The various dialects of shell scripts are considered to be scripting languages."
+  },
+  {
+    "id": "powershell",
+    "label": "Powershell",
+    "description": "A task automation and configuration management program from Microsoft, consisting of a command-line shell and the associated scripting language."
   }
 ]

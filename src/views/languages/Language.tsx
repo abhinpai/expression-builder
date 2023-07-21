@@ -3,7 +3,7 @@ import React from 'react'
 import { Container } from '@component/index'
 import { ILanguage } from '@appTypes/ILanguage.interface'
 
-import { AVAILABLE_LANGUAGES } from 'utils/constants'
+import AVAILABLE_LANGUAGES from 'core/languages/languages.json'
 
 import styles from './language.module.scss'
 import { useNavigate } from 'react-router-dom'

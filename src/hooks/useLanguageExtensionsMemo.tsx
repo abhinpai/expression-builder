@@ -1,9 +1,17 @@
-import { python } from '@codemirror/lang-python'
 import { Extension } from '@codemirror/state'
 import { basicSetup } from 'codemirror'
 import { EditorView, ViewUpdate, placeholder } from '@codemirror/view'
+import { LanguageSupport, StreamLanguage } from '@codemirror/language'
 import { useMemo } from 'react'
 import { Compartment } from '@codemirror/state'
+
+import { python } from '@codemirror/lang-python'
+import { json } from '@codemirror/lang-json'
+import { java } from '@codemirror/lang-java'
+import { javascript } from '@codemirror/lang-javascript'
+import { markdown } from '@codemirror/lang-markdown'
+import { yaml } from '@codemirror/legacy-modes/mode/yaml'
+import { getLanguageExtension } from 'services/language.service'
 
 export function useLanguageExtensionsMemo(language: string): Extension[] {
   const commonExtensions = [
@@ -15,13 +23,42 @@ export function useLanguageExtensionsMemo(language: string): Extension[] {
   ]
 
   return useMemo(() => {
+    const languageConf = new Compartment()
     switch (language) {
       case 'python':
-        const languageConf = new Compartment()
         commonExtensions.push(python())
         commonExtensions.push(languageConf.of(python()))
         return commonExtensions
-      case 'raw':
+      case 'json':
+        commonExtensions.push(json())
+        commonExtensions.push(languageConf.of(json()))
+        return commonExtensions
+      case 'javascript':
+        commonExtensions.push(
+          javascript({
+            jsx: true,
+            typescript: true
+          })
+        )
+        commonExtensions.push(
+          languageConf.of(
+            javascript({
+              jsx: true,
+              typescript: true
+            })
+          )
+        )
+        return commonExtensions
+      case 'java':
+        commonExtensions.push(java())
+        commonExtensions.push(languageConf.of(java()))
+        return commonExtensions
+      case 'markdown':
+        commonExtensions.push(markdown())
+        commonExtensions.push(languageConf.of(markdown()))
+        return commonExtensions
+      case 'yaml':
+        commonExtensions.push(StreamLanguage.define(yaml))
         return commonExtensions
       default:
         return commonExtensions
