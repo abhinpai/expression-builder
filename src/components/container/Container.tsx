@@ -21,9 +21,17 @@ export const Container: FC<PropsWithChildren> = ({ children }) => {
 
   return (
     <main className={styles.container}>
-      <nav className={styles.nav}>
+      <nav
+        className={
+          isEmpty(languageId)
+            ? `${styles.nav} ${styles['nav_without_lang']}`
+            : `${styles.nav} ${styles['nav_with_lang']}`
+        }
+      >
         {!isEmpty(languageId) ? (
-          <div className={styles['back_nav']} onClick={goBack} ><ArrowLeftOutlined height={1} /></div>
+          <div className={styles['back_nav']} onClick={goBack}>
+            <ArrowLeftOutlined height={1} />
+          </div>
         ) : undefined}
         <div>
           <h1 className={styles.title}>Formula Editor</h1>

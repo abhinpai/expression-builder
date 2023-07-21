@@ -8,7 +8,7 @@
       @apply h-full overflow-y-auto flex flex-col gap-2 mt-4;
 
       .content {
-        @apply rounded p-2 border border-gray-200 cursor-pointer font-normal text-sm hover:border-blue-400 hover:shadow-blue-50 hover:shadow hover:bg-blue-50;
+        @apply rounded p-2 border border-gray-300 cursor-pointer font-normal text-sm hover:border-blue-400 hover:shadow-blue-50 hover:shadow hover:bg-blue-50;
       }
 
       .selected_content {
