@@ -1,9 +1,14 @@
 import { Extension } from '@codemirror/state'
 import { basicSetup } from 'codemirror'
-import { EditorView, ViewUpdate, placeholder } from '@codemirror/view'
-import { LanguageSupport, StreamLanguage } from '@codemirror/language'
+import { EditorView, ViewUpdate, keymap, placeholder } from '@codemirror/view'
+import {
+  LanguageDescription,
+  LanguageSupport,
+  StreamLanguage
+} from '@codemirror/language'
 import { useMemo } from 'react'
 import { Compartment } from '@codemirror/state'
+import { defaultKeymap } from "@codemirror/commands";
 
 import { python } from '@codemirror/lang-python'
 import { json } from '@codemirror/lang-json'
@@ -11,11 +16,12 @@ import { java } from '@codemirror/lang-java'
 import { javascript } from '@codemirror/lang-javascript'
 import { markdown } from '@codemirror/lang-markdown'
 import { yaml } from '@codemirror/legacy-modes/mode/yaml'
-import { getLanguageExtension } from 'services/language.service'
+import { csharp } from '@codemirror/legacy-modes/mode/clike'
 
 export function useLanguageExtensionsMemo(language: string): Extension[] {
   const commonExtensions = [
     basicSetup,
+    keymap.of(defaultKeymap),
     placeholder('Expression (press Shift+Enter for newlines)'),
     EditorView.updateListener.of((update: ViewUpdate): void => {
       console.log(update.state.doc.toString())
@@ -34,20 +40,8 @@ export function useLanguageExtensionsMemo(language: string): Extension[] {
         commonExtensions.push(languageConf.of(json()))
         return commonExtensions
       case 'javascript':
-        commonExtensions.push(
-          javascript({
-            jsx: true,
-            typescript: true
-          })
-        )
-        commonExtensions.push(
-          languageConf.of(
-            javascript({
-              jsx: true,
-              typescript: true
-            })
-          )
-        )
+        commonExtensions.push(javascript())
+        commonExtensions.push(languageConf.of(javascript()))
         return commonExtensions
       case 'java':
         commonExtensions.push(java())
@@ -59,6 +53,11 @@ export function useLanguageExtensionsMemo(language: string): Extension[] {
         return commonExtensions
       case 'yaml':
         commonExtensions.push(StreamLanguage.define(yaml))
+        return commonExtensions
+      case 'c-sharp':
+        commonExtensions.push(
+          new LanguageSupport(StreamLanguage.define(csharp))
+        )
         return commonExtensions
       default:
         return commonExtensions

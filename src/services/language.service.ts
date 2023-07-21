@@ -1,4 +1,7 @@
 // https://github.com/BookStackApp/BookStack/blob/1c922be4c7b0e32c57511e8875d479b99b763f75/resources/js/code/languages.js#L5
+// https://github.com/jupyterlab/jupyterlab/blob/fa96c726ae800ae5297296871dafc96cb3a176ae/packages/codemirror/src/language.ts#L635  => This has a very good example to load the language model lazily
+// https://github.com/melpon/wandbox/blob/a898d2d98bfda79baf638554e09296f279c139a9/canine/app/utils/resolveLanguageMode.tsx#L186 =?> lazy load language
+
 
 import { StreamLanguage } from '@codemirror/language'
 
